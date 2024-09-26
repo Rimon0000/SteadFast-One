@@ -77,8 +77,6 @@ body {
 }
 
 /* PRODUCT  */
-
-
 .product-title{
     margin-top: 50px;
     text-align: center;
@@ -136,6 +134,13 @@ body {
     text-align: justify;
 }
 
+/* FOOTER  */
+.footer-bg{
+    background: #111111;
+}
+.footer-text-bg{
+    color: #CFCFCF;
+}
 
  /* FOR RESPONSIVE  */
 @media (max-width: 1200px) {
