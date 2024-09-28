@@ -12,14 +12,55 @@ body {
 }
 
 .navbar {
-    padding-left: 50px;
-    padding-right: 50px;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    margin: 10px auto;
+    padding-left: 2rem;
+    padding-right: 2rem;
 }
 
-.nav-logo{
-    font-size: 1.3rem;
+.nav-logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.navbar-nav {
+    text-align: center;
+    padding-right: 9px !important;
+
+}
+
+.navbar-toggler {
+    border: none;
+}
+
+.nav-link {
+    color: #000;
+    transition: color 0.3s ease;
+    margin-right: 60px;
+    margin-top: 1px;
+}
+
+.navbar-nav .nav-item {
+    margin-right: -44px; /* Adjust this value to control the gap */
+}
+
+/* Ensure no extra space after the last item */
+.navbar-nav .nav-item:last-child {
+    margin-right: 0; 
+}
+
+
+.nav-link:hover {
+    color: #007bff;
+}
+
+.btn-secondary {
+    background-color: #6c757d;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+.btn-secondary:hover {
+    background-color: #5a6268;
 }
 
 .banner {
@@ -32,7 +73,7 @@ body {
 }
 
 .banner-container {
-    text-align: right;
+    text-align: center;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -41,11 +82,10 @@ body {
 
 .banner-title {
     font-weight: 700;
-    font-size: 65px;
+    font-size: 60px;
     width: 100%;
     color: #151414;
     font-family: 'Work Sans';
-    text-align: right;
     max-width: 525px;
     height: auto;
 }
@@ -54,11 +94,9 @@ body {
     font-family: 'Work Sans';
     font-weight: 400;
     font-size: 16px;
-    text-align: right;
     color: #444343;
     width: 100%;
     max-width: 494px;
-    height: auto;
     margin-top: 20px;
 }
 
@@ -71,9 +109,8 @@ body {
     background: #F15B22;
     border-radius: 5px;
     padding: 16px 32px;
-    display: inline-block;
     margin-top: 20px;
-    text-decoration: none;
+    border: none;
 }
 
 /* PRODUCT  */
@@ -91,15 +128,15 @@ body {
     margin-right: 50px;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 25px;
+    gap: 24px;
 }
 
 .product-card{
     background-color: #fff;
     border-radius: 12px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    max-width: 300px;
-    margin: 20px auto;
+    max-width: 320px;
+    margin: 12px auto;
     overflow: hidden;
 }
 
@@ -119,11 +156,10 @@ body {
     margin-bottom: 12px;
     font-size: 1.5rem;
     font-weight: 700;
-    font-family: sans-serif;
+    font-family: 'Work Sans';
 }
 
 .card-description{
-    /* font-family: sans-serif; */
     font-weight: 400;
     font-size: 1rem;
 }
@@ -144,8 +180,12 @@ body {
 
  /* FOR RESPONSIVE  */
 @media (max-width: 1200px) {
+    .banner {
+        height: 600px;
+    }
+
     .banner-title {
-        font-size: 48px;
+        font-size: 60px;
         width: 100%;
     }
     
@@ -194,22 +234,13 @@ body {
         height: 400px;
     }
 
-    .banner-container {
-        top: 50%;
-        left: 50%;
-        text-align: center;
-        transform: translate(-50%, -50%);
-    }
-
     .banner-title {
         font-size: 35px;
-        text-align: center;
         width: 100%;
     }
 
     .banner-description {
         font-size: 12px;
-        text-align: center;
         width: 100%;
     }
 
@@ -232,13 +263,11 @@ body {
 
     .banner-title {
         font-size: 20px;
-        text-align: center;
         width: 100%;
     }
 
     .banner-description {
         font-size: 12px;
-        text-align: center;
         width: 100%;
     }
 
@@ -250,20 +279,14 @@ body {
 }
 
 
-/* //PRODUCT  */
+/*PRODUCT  */
 @media (max-width: 576px) {
     .product {
         grid-template-columns: 1fr;
-        margin-left: 5px;
-        margin-right: 5px;
     }
     
     .card-title {
         font-size: 1rem;
-    }
-    
-    .card-body {
-        padding: 5px 10px;
     }
 }
 
@@ -271,16 +294,10 @@ body {
 @media (max-width: 768px) {
     .product {
         grid-template-columns: repeat(2, 1fr);
-        margin-left: 10px;
-        margin-right: 10px;
     }
     
     .card-title {
         font-size: 1.25rem;
-    }
-    
-    .card-body {
-        padding: 10px 15px;
     }
 }
 
@@ -288,15 +305,9 @@ body {
 @media (max-width: 992px) {
     .product {
         grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        margin-left: 20px;
-        margin-right: 20px;
     }
     
     .card-title {
         font-size: 1.5rem;
-    }
-    
-    .card-body {
-        padding: 10px 20px;
     }
 }
